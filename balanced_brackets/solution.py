@@ -19,7 +19,9 @@ def is_matched(expression):
             if charstack[-1] != "{":
                 return False
             charstack.pop()
-    return True
+    if len(charstack) == 0:
+        return True
+    return False
 
 t = int(raw_input().strip())
 for a0 in xrange(t):
